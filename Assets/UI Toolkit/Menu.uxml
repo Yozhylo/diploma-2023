@@ -1,27 +1,30 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <ui:VisualElement name="Container" style="align-items: flex-start; justify-content: center; flex-grow: 1; flex-direction: column;">
         <ui:Foldout text="Aquarium Parameters" value="false" name="Environment" tabindex="1" style="border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; border-left-color: rgb(19, 16, 16); border-right-color: rgb(19, 16, 16); border-top-color: rgb(19, 16, 16); border-bottom-color: rgb(19, 16, 16); flex-grow: 0; flex-shrink: 1; flex-direction: column; flex-wrap: nowrap;">
-            <ui:TextField picking-mode="Ignore" label="Tank Size" value="20" is-delayed="false" max-length="3" password="false" style="justify-content: space-between; align-items: stretch;">
-                <ui:Label text="\tL" display-tooltip-when-elided="true" name="Label" style="flex-shrink: 0; flex-grow: 0;" />
+            <ui:TextField picking-mode="Ignore" label="Tank Size" value="20" is-delayed="false" max-length="3" password="false" name="tankSize" style="justify-content: space-between; align-items: stretch;">
+                <ui:Label text="\tL" display-tooltip-when-elided="true" name="Label" style="flex-shrink: 0; flex-grow: 0; flex-direction: column; flex-wrap: nowrap; -unity-text-align: upper-left; border-left-width: 0; left: auto; width: 50px; height: auto;" />
             </ui:TextField>
-            <ui:TextField picking-mode="Ignore" label="Temperature" value="20" is-delayed="false" max-length="3" password="false" style="flex-shrink: 0; flex-grow: 0; flex-direction: row; flex-wrap: nowrap; justify-content: flex-start;">
-                <ui:Label text="\t℃" display-tooltip-when-elided="true" name="Label" enable-rich-text="true" style="width: auto;" />
+            <ui:TextField picking-mode="Ignore" label="Temperature" value="20" is-delayed="false" max-length="3" password="false" name="temp" style="flex-shrink: 0; flex-grow: 0; flex-direction: row; flex-wrap: nowrap; justify-content: flex-start; width: 250px;">
+                <ui:Label text="\t℃" display-tooltip-when-elided="true" name="Label" enable-rich-text="true" style="width: 50px; right: 5px;" />
             </ui:TextField>
-            <ui:TextField picking-mode="Ignore" label="Acidity" value="20" is-delayed="false" max-length="3" password="false">
-                <ui:Label text="  pH" display-tooltip-when-elided="true" name="Label" />
+            <ui:TextField picking-mode="Ignore" label="Acidity" value="20" is-delayed="false" max-length="3" password="false" name="acidity">
+                <ui:Label text="  pH" display-tooltip-when-elided="true" name="Label" style="width: 50px; position: relative; left: 20px;" />
             </ui:TextField>
-            <ui:TextField picking-mode="Ignore" label="Ammonia" value="20" is-delayed="false" max-length="3" password="false">
-                <ui:Label text="mg/L" display-tooltip-when-elided="true" name="Label" />
+            <ui:TextField picking-mode="Ignore" label="Ammonia" value="20" is-delayed="false" max-length="3" password="false" name="ammonia">
+                <ui:Label text="mg/L" display-tooltip-when-elided="true" name="Label" style="border-left-width: 0; width: 50px; left: 20px;" />
             </ui:TextField>
-            <ui:TextField picking-mode="Ignore" label="Nitrite" value="20" is-delayed="false" max-length="3" password="false">
-                <ui:Label text="mg/L" display-tooltip-when-elided="true" name="Label" />
+            <ui:TextField picking-mode="Ignore" label="Nitrite" value="20" is-delayed="false" max-length="3" password="false" name="nitrite">
+                <ui:Label text="mg/L" display-tooltip-when-elided="true" name="Label" style="width: 50px; left: 20px;" />
             </ui:TextField>
-            <ui:TextField picking-mode="Ignore" label="Nitrate" value="20" is-delayed="false" max-length="3" password="false">
-                <ui:Label text="mg/L" display-tooltip-when-elided="true" name="Label" />
+            <ui:TextField picking-mode="Ignore" label="Nitrate" value="20" is-delayed="false" max-length="3" password="false" name="nitrate">
+                <ui:Label text="mg/L" display-tooltip-when-elided="true" name="Label" style="width: 50px; left: 20px;" />
             </ui:TextField>
         </ui:Foldout>
         <ui:Foldout text="Biotopic Agents" value="false" name="Biotope" tabindex="2" style="justify-content: flex-start; align-items: stretch;">
             <ui:Button text="Add new agent" display-tooltip-when-elided="true" enable-rich-text="true" max-length="3" name="AddNewAgent" style="width: auto; height: 20px; align-items: auto; justify-content: space-between;" />
         </ui:Foldout>
+    </ui:VisualElement>
+    <ui:VisualElement name="buttonHolder" style="justify-content: center; align-items: center; height: 104px;">
+        <ui:Button text="Start simulation" display-tooltip-when-elided="true" name="buttonStart" style="right: auto; left: auto; justify-content: center; align-items: center; -unity-text-align: middle-center; white-space: nowrap; width: 200px; height: 30px;" />
     </ui:VisualElement>
 </ui:UXML>

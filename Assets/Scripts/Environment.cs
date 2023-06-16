@@ -7,8 +7,8 @@ public class Environment {
   private static Environment instance = null;
   public static Environment SharedInstance {
 		get {
-      if (instance == null) instance = new Environment();
-      return instance;
+          if (instance == null) instance = new Environment();
+          return instance;
 		}
 	}
   public float Temperature {
