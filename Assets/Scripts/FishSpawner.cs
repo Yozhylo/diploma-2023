@@ -7,12 +7,11 @@ public class FishSpawner : MonoBehaviour {
   // public List<Transform> Waypoints = new List<Transform>();
   //[SerializeField]
   public GameObject FishPrefab;
+  public int FishAmount;
   void Start() {
-    createFish(FishPrefab, new Vector3(Random.value*2, Random.value*2));
-    createFish(FishPrefab, new Vector3(Random.value*2, Random.value*2));
-    createFish(FishPrefab, new Vector3(Random.value*2, Random.value*2));
+		for (int i = 0; i < FishAmount; i++) createFish(FishPrefab, new Vector3(Random.Range(-2.0f, 2.0f), Random.Range(-2.0f, 2.0f), Random.Range(-2.0f, 2.0f)));
   }
   public static void createFish(GameObject prefab, Vector3 position) {
-    Instantiate(prefab, position, new Quaternion(0, 0, 0, 0));
+    Instantiate(prefab, position, new Quaternion());
 	}
 }
